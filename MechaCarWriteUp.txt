@@ -1,0 +1,49 @@
+MechaCar Pre Launch Analysis
+Statistical Analysis performed using R
+
+# MPG Regression
+The MechaCar MPG analysis was performed taking in consideration the following variables:
+- Vehicle length
+- Vehicle weight
+- Spoiler angle
+- Ground clearance
+- AWD (1 for available and 0 for not-available)
+
+The analysis shows that the vehicle weight, the spoiler angle, and the fact of been or not AWD have the most influence when predicting the MPG.
+The relationship of the variables to predict MPG can be broken down into two components: R² and p-value.
+The analysis shows a R² of 0.71, which gives the model a strong prediction, where 70% of time the model will be right.
+With such lower p-value of 5.35x10-11, it is safe to reject our null hypothesis, assuming a significance level of 0.050%, which means that the slope of our linear model is not zero.
+
+# Suspension Coil Summary
+A summary table was created to show mean, median, variance and the standard deviation (SD) of the results, in PSI, for each Lot on the suspension coil test.
+The mean and the medium values for the three lots are similar, however, the variance and the SD of the three are completely different. The results shows that the Lot1 is more robust with very little variation and SD. Lot2 results are still robust with low variance and SD. Lot3 is where the results vary most, although the mean and median values are within the 1500 PSI, the variance and SD are far greater than Lot1 and Lot2.
+Considering the limit of +/- 100PSI, all three lots do not exceed this value and on the worst case, on Lot3, the min is 1463PSI and the max is 1536PSI.
+
+# Suspension Coil T-Test
+A T-Test was performed on the suspension coil results to understand if the results would be statistically different from the 1500PSI mark.
+The test results were analysed as the entire table against the 1500PSI mark, a 50 points sample against the 1500PSI mark and then the results were filtered into lots (lot1, lot2 and lot3) and then compared against each other.
+In every case the p-values were higher than the assumed significant level of 0.05%, concluding that there is not sufficient evidence to reject the null hypothesis and the means are statistically similar.
+
+# Study Design
+In order to MechaCar to become a great success even before its launch date, the following studies are recommended to achieve this goal:
+* Metric: fuel efficiency
+- Objective: MechaCar should have a better than average full efficiency
+- Null hypothesis: MechaCar is at the mean value
+- Alternative hypothesis: MechaCar has a greater full efficiency
+- Statistical test: ANOVA and multiple regression analysis
+- Test data: Under the standard full efficiency test, the MechaCar should be evaluated with different configurations of engine, transmission, and an electric and hybrid version
+
+* Metric: Cost
+- Objective: MechaCar need to be competitive and should have an average cost for its category.
+- Null hypothesis: MechaCar is at the mean value
+- Alternative hypothesis: MechaCar cost is not 10% greater than average
+- Statistical test: T-Test and multiple regression analysis
+- Test data: MechaCar should be evaluated with different configurations of interior finishes, external materials, engine, transmission, and accessories to best determine the final cost.
+
+* Metric: performance
+- Objective: MechaCar was designed to be different and bold and consumers will expect a better performance.
+- Null hypothesis: MechaCar is at the mean value
+- Alternative hypothesis: MechaCar performance is not less than average.
+- Statistical Test: ANOVA and multiple regression analysis
+- Test data: Under the standard full efficiency test, the MechaCar should be evaluated with different configurations of engine, transmission, and an electric and hybrid version
+
